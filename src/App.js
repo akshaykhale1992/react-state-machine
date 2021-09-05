@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import SimpleStateToggle from './components/SimpleStateToggle';
+import ProfileCard from './components/ProfileCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '0 12px' }}>
+      <div style={{ textAlign: 'center' }}>
+        <h1>Here is a Simple Toggle State Machine</h1>
+        <SimpleStateToggle />
+      </div>
+      <div style={{ textAlign: 'center' }}>
+        <h1>Here is Profile Card State Machine</h1>
+        <ProfileCard />
+      </div>
     </div>
   );
 }
