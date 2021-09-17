@@ -1,3 +1,19 @@
+export const Loading = () => {
+  return (
+    <div>
+      <h5>Loading Data Please wait...</h5>
+    </div>
+  )
+}
+
+export const Failed = () => {
+  return (
+    <div>
+      <h5>Failed to load the Data, Please try again later...</h5>
+    </div>
+  )
+}
+
 export const Default = ({ send }) => {
   return (
     <div>
