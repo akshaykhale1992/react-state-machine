@@ -1,4 +1,4 @@
-export const registerRequest = () => {
+export const fetchProfileDetails = () => {
     // return Promise.reject();
     return Promise.resolve();
 }

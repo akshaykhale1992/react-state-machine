@@ -5,7 +5,7 @@ export const ProfileCardMachine = createMachine({
   states: {
     loading: {
       invoke: {
-        src: 'registerRequest',
+        src: 'fetchProfileDetails',
         onDone: {
           target: 'default',
         },

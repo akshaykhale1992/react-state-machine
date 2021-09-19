@@ -1,8 +1,8 @@
-import { ProfileCardMachine } from './ProfileCardStateMachine';
 import { useMachine } from '@xstate/react';
+import { ProfileCardMachine } from './ProfileCardStateMachine';
 import { Loading, Failed, Accepted, Blocked, Default, Rejected, Requested } from './ProfileCardStates';
 import { logRequest, logBlock, logAccepted } from './ProfileCardEffects'
-import { registerRequest } from './ProfileCardServices';
+import { fetchProfileDetails } from './ProfileCardServices';
 
 const ProfileCard = () => {
     const [current, send] = useMachine(ProfileCardMachine, {
@@ -12,7 +12,7 @@ const ProfileCard = () => {
             logAccepted
         },
         services: {
-            registerRequest
+            fetchProfileDetails
         }
     });
     switch (current.value) {
